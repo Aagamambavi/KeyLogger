@@ -1,0 +1,5 @@
+pynput==1.7.6
+pymongo==4.6.1
+python-dotenv==1.0.0
+pygetwindow==0.0.9
+anthropic==0.28.0
