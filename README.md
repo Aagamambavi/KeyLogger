@@ -39,6 +39,19 @@ A comprehensive Python-based keylogger for learning how system input monitoring 
 - Manual session termination with Ctrl+C
 - Clean shutdown and resource cleanup
 
+
+🛡️ **Detection & Mitigation (Purple Team Perspective)**
+This project is designed with a "Purple Team" methodology, providing not just the offensive tool but also the defensive telemetry required to stop it.
+
+**Key Defensive Insights:**
+- Indicators of Compromise (IoCs): Detection focuses on identifying unexpected pythonw.exe processes, the presence of keylogger.log, and outbound traffic spikes on Port 587 (SMTP) or 27017 (MongoDB).
+
+- Behavioral Detection: Monitoring for low-level system hooks (SetWindowsHookEx) and processes requesting "Input Monitoring" permissions.
+
+- Strategic Mitigation: Implementation of Egress Filtering to block unauthorized data exfiltration and the use of Multi-Factor Authentication (MFA) to invalidate captured credentials.
+
+- For a detailed technical breakdown of how to detect, analyze, and neutralize this tool, see the full DETECTION.md guide.
+
 ## Quick Start
 
 ### 1. Install Dependencies
